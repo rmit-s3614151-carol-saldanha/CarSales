@@ -1,0 +1,22 @@
+C:/Users/Shekhar/Desktop/Lecture6/Lecture6/Lecture6/bin/Debug/netcoreapp2.0/Lecture6.deps.json
+C:/Users/Shekhar/Desktop/Lecture6/Lecture6/Lecture6/bin/Debug/netcoreapp2.0/Lecture6.runtimeconfig.json
+C:/Users/Shekhar/Desktop/Lecture6/Lecture6/Lecture6/bin/Debug/netcoreapp2.0/Lecture6.runtimeconfig.dev.json
+C:/Users/Shekhar/Desktop/Lecture6/Lecture6/Lecture6/bin/Debug/netcoreapp2.0/Lecture6.dll
+C:/Users/Shekhar/Desktop/Lecture6/Lecture6/Lecture6/bin/Debug/netcoreapp2.0/Lecture6.pdb
+C:/Users/Shekhar/Desktop/Lecture6/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.csprojResolveAssemblyReference.cache
+C:/Users/Shekhar/Desktop/Lecture6/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.csproj.CoreCompileInputs.cache
+C:/Users/Shekhar/Desktop/Lecture6/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.AssemblyInfoInputs.cache
+C:/Users/Shekhar/Desktop/Lecture6/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.AssemblyInfo.cs
+C:/Users/Shekhar/Desktop/Lecture6/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.dll
+C:/Users/Shekhar/Desktop/Lecture6/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.pdb
+/Users/carol/Downloads/Week06 4/Example04/Lecture6/Lecture6/bin/Debug/netcoreapp2.0/Lecture6.deps.json
+/Users/carol/Downloads/Week06 4/Example04/Lecture6/Lecture6/bin/Debug/netcoreapp2.0/Lecture6.runtimeconfig.json
+/Users/carol/Downloads/Week06 4/Example04/Lecture6/Lecture6/bin/Debug/netcoreapp2.0/Lecture6.runtimeconfig.dev.json
+/Users/carol/Downloads/Week06 4/Example04/Lecture6/Lecture6/bin/Debug/netcoreapp2.0/Lecture6.dll
+/Users/carol/Downloads/Week06 4/Example04/Lecture6/Lecture6/bin/Debug/netcoreapp2.0/Lecture6.pdb
+/Users/carol/Downloads/Week06 4/Example04/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.csprojResolveAssemblyReference.cache
+/Users/carol/Downloads/Week06 4/Example04/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.csproj.CoreCompileInputs.cache
+/Users/carol/Downloads/Week06 4/Example04/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.AssemblyInfoInputs.cache
+/Users/carol/Downloads/Week06 4/Example04/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.AssemblyInfo.cs
+/Users/carol/Downloads/Week06 4/Example04/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.dll
+/Users/carol/Downloads/Week06 4/Example04/Lecture6/Lecture6/obj/Debug/netcoreapp2.0/Lecture6.pdb
