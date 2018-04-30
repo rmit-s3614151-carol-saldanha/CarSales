@@ -1,0 +1,10 @@
+﻿<Properties StartupConfiguration="{75E53D0B-B6B6-45C1-A1C5-4CF244CF4E7F}|Default">
+  <MonoDevelop.Ide.ItemProperties.GitAPI PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
