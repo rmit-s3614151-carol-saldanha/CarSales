@@ -1,7 +1,7 @@
-﻿<Properties StartupConfiguration="{8D4315DA-A2C3-43D4-BD9F-114E0505F5EB}|Default">
+﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="GitExample.sln">
     <Files>
-      <File FileName="GitExample.sln" Line="1" Column="1" />
+      <File FileName="GitExample.sln" Line="6" Column="78" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
