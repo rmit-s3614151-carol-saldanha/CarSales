@@ -16,9 +16,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Views\Home\Index.cshtml">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    <Content Remove="Views\Home\About %28copy%29.cshtml" />
+    <Content Remove="Views\Home\About %28copy%29.cshtml" />
+    <Content Remove="Views\Home\GitUser.cshtml" />
+    <Content Remove="Views\Home\Index.cshtml" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Folder Include="GitModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Home\GitUser.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\ErrorViewModel.cs" />
+    <Compile Remove="Models\OwnerInventory.cs" />
+    <Compile Remove="Models\Product.cs" />
+    <Compile Remove="Models\StockRequest.cs" />
+    <Compile Remove="Models\Store.cs" />
+    <Compile Remove="Models\StoreInventory.cs" />
+    <Compile Remove="Data\Lecture6Context.cs" />
+    <Compile Remove="Migrations\20180410124759_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20180410124759_Initial.cs" />
+    <Compile Remove="Migrations\Lecture6ContextModelSnapshot.cs" />
+    <Compile Remove="Data\SeedData.cs" />
+  </ItemGroup>
 </Project>

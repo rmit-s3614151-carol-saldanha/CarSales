@@ -1,2 +1,55 @@
-﻿body {
+﻿
+@model IEnumerable<GitUser>
+
+@{
+    ViewBag.Title = "GitUser";
 }
+
+<h2>Git User</h2>
+
+
+<form method="get">
+    <p>
+        User Name: <input name="userName" value="@ViewBag.userName" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                 @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GitHubHomeUrl)
+           </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Homepage)
+           </th>
+              <th>
+                @Html.DisplayNameFor(model => model.Watchers)
+           </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model) {
+            <tr>
+            <td>
+                 @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GitHubHomeUrl)
+           </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Homepage)
+           </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Watchers)
+           </td>
+            </tr>
+        }
+    </tbody>
+</table>

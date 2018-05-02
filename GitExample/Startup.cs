@@ -1,5 +1,4 @@
-﻿using Lecture6.Models;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -21,8 +20,7 @@ namespace Lecture6
         {
             services.AddMvc();
 
-            services.AddDbContext<Lecture6Context>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("Lecture6Context")));
+        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,7 +43,7 @@ namespace Lecture6
             {
                 routes.MapRoute(
                     "default",
-                    "{controller=Home}/{action=Index}/{id?}");
+                    "{controller=Home}/{action=Git}/{id?}");
             });
         }
     }

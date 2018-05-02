@@ -2,18 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using System.Runtime.Serialization;
+namespace WebAPIClient
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
-namespace GitExample.GitModel
+//namespace GitExample.GitModel
 {
-    public class GitUser : Controller
+    // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
+    [DataContract(Name = "repo")]
+    public class GitUser
     {
-        // GET: /<controller>/
-        public IActionResult Index()
-        {
-            return View();
-        }
+
+
+        [DataMember(Name = "description")]
+        public string Description { get; set; }
+
+        [DataMember(Name = "html_url")]
+        public Uri GitHubHomeUrl { get; set; }
+
+        [DataMember(Name = "homepage")]
+        public Uri Homepage { get; set; }
+
+        [DataMember(Name = "watchers")]
+        public int Watchers { get; set; }
     }
+
 }
+
