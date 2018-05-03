@@ -20,6 +20,8 @@
     <Content Remove="Views\Home\About %28copy%29.cshtml" />
     <Content Remove="Views\Home\GitUser.cshtml" />
     <Content Remove="Views\Home\Index.cshtml" />
+    <Content Remove="Views\Home\About %28copy%29.cshtml" />
+    <Content Remove="Views\Home\About %28copy%29.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GitModel\" />
@@ -39,5 +41,7 @@
     <Compile Remove="Migrations\20180410124759_Initial.cs" />
     <Compile Remove="Migrations\Lecture6ContextModelSnapshot.cs" />
     <Compile Remove="Data\SeedData.cs" />
+    <Compile Remove="GitModel\GitUser %28copy%29.cs" />
+    <Compile Remove="GitModel\GitUser %28copy%29.cs" />
   </ItemGroup>
 </Project>

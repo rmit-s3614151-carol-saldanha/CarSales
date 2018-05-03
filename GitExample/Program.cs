@@ -18,7 +18,11 @@ namespace WebAPIClient
     {
         public static readonly HttpClient client = new HttpClient();
 
+        public static string user="";
+
         public static List<GitUser> repositories = ProcessRepositories().Result;
+        //public static List<SearchUser> searchResult = search().Result;
+
         public static void Main(string[] args)
         {
            
@@ -29,15 +33,6 @@ namespace WebAPIClient
             {
                 var services = scope.ServiceProvider;
 
-                //try
-                //{
-                //    SeedData.Initialize(services);
-                //}
-                //catch(Exception ex)
-                //{
-                //    var logger = services.GetRequiredService<ILogger<Program>>();
-                //    logger.LogError(ex, "An error occurred seeding the DB.");
-                //}
             }
 
             BuildWebHost(args).Run();
@@ -46,35 +41,41 @@ namespace WebAPIClient
         private static async Task<List<GitUser>> ProcessRepositories()
         {
             var serializer = new DataContractJsonSerializer(typeof(List<GitUser>));
-
             client.DefaultRequestHeaders.Accept.Clear();
-            //client.DefaultRequestHeaders.Accept.Add(
-                //new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
-
-            //var byteArray = En÷coding.ASCII.GetBytes("rmit-s3614151-carol-saldanha:Car@2612");
             client.DefaultRequestHeaders.Add("User-Agent", "rmit-s3614151-carol-saldanha");
-
-            //client.DefaultRequestHeaders.Add("Basic", Convert.ToBase64String(byteArray))));
-
-
-            var streamTask = client.GetStreamAsync("https://api.github.com/users");
+            var streamTask = client.GetStreamAsync("https://api.github.com/users?since=0");
             var repositories = serializer.ReadObject(await streamTask) as List<GitUser>;
-
-            Console.WriteLine("Hello");
-            // Console.WriteLine(GitUser);
-            foreach (var repo in repositories)
-            {
-                Console.WriteLine(repo.id);
-                Console.WriteLine(repo.login);
-
-            }
-            Console.WriteLine();
-
-
             return repositories;
+        }
 
+        public static async Task<List<SearchUser>> search()
+        {
+            var serializer = new DataContractJsonSerializer(typeof(List<SearchUser>));
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Add("User-Agent", "rmit-s3614151-carol-saldanha");
+            var url = "https://api.github.com/users/";
+            var searchUrl = Combine(url, user);
+            var streamTask = client.GetStreamAsync(searchUrl);
+            var searchResult = serializer.ReadObject(await streamTask) as List<SearchUser>;
+            return searchResult;
 
         }
+
+
+        public static string getUserName(string userName)
+        {
+            user = userName;
+            return user;
+        }
+
+        public static string Combine(string uri1, string uri2)
+        {
+            uri1 = uri1.TrimEnd('/');
+            uri2 = uri2.TrimStart('/');
+            string uri3 = "repos".TrimStart('/');
+            return string.Format("{0}/{1}/{2}", uri1, uri2, uri3);
+        }
+
 
         private static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args).UseStartup<Startup>().Build();

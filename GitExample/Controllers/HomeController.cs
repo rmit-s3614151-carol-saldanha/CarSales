@@ -4,9 +4,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAPIClient;
+using System.Threading.Tasks;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Collections.Generic;
+using System.Runtime.Serialization.Json;
 
 
-namespace Lecture6.Controllers
+namespace WebAPIClient
 {
     public class HomeController : Controller
     {
@@ -38,9 +44,31 @@ namespace Lecture6.Controllers
 
         public async Task<IActionResult> Git(string userName)
         {
-            
-            return View(Program.repositories);
+
+         
+            return View( Program.repositories);
         }
+
+        public async Task<IActionResult> Search(string userName)
+        {
+             if (!string.IsNullOrWhiteSpace(userName))
+                {
+                    Program.getUserName(userName);
+
+                    ViewBag.userName = userName;
+                    return View(await Program.search());
+
+
+                }
+            else
+                {
+                        ViewData["data"] = "Enter a GIT Id to be searched!!";
+                }
+           
+            return View(await Program.search());
+        }
+
+
 
         public IActionResult About()
         {
