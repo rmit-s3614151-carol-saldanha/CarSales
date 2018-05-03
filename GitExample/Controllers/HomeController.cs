@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -10,7 +11,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
-
+using System.Diagnostics.Contracts;
 
 namespace WebAPIClient
 {
@@ -51,21 +52,17 @@ namespace WebAPIClient
 
         public async Task<IActionResult> Search(string userName)
         {
-             if (!string.IsNullOrWhiteSpace(userName))
-                {
-                    Program.getUserName(userName);
+            if (!string.IsNullOrWhiteSpace(userName))
+            {
+                Program.getUserName(userName);
 
-                    ViewBag.userName = userName;
-                    return View(await Program.search());
-
-
-                }
-            else
-                {
-                        ViewData["data"] = "Enter a GIT Id to be searched!!";
-                }
-           
-            return View(await Program.search());
+                ViewBag.userName = userName;
+                return View(await Program.search());
+            }
+            else{
+                throw new Exception("Value should not be null");
+            }
+           return View(await Program.search());
         }
 
 
@@ -83,6 +80,8 @@ namespace WebAPIClient
 
             return View();
         }
+
+     
 
      
     }

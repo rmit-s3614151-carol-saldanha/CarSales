@@ -28,11 +28,7 @@
             <th>
                 Home URL
            </th>
-              <th>
-                Watchers
-           </th>
-
-            <th></th>
+        <th></th>
         </tr>
     </thead>
     <tbody>
@@ -45,12 +41,11 @@
                 @Html.DisplayFor(modelItem => item.login)
            </td>
             <td>
-                @Html.DisplayFor(modelItem => item.repos_url)
+                 <a href="@Html.DisplayFor(modelItem => item.html_url)">
+            @Html.DisplayFor(modelItem => item.html_url)
+            </a>
            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.followers_url)
-           </td>
-            </tr>
+           </tr>
             
         }
     </tbody>

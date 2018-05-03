@@ -21,11 +21,9 @@ namespace WebAPIClient
         [DataMember(Name = "login")]
         public Uri login { get; set; }
 
-        [DataMember(Name = "repos_url")]
-        public Uri repos_url { get; set; }
+        [DataMember(Name = "html_url")]
+        public Uri html_url { get; set; }
 
-        [DataMember(Name = "followers_url")]
-        public Uri followers_url { get; set; }
     }
 
 }
