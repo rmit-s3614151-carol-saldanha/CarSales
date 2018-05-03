@@ -19,16 +19,16 @@
     <thead>
         <tr>
             <th>
-                 @Html.DisplayNameFor(model => model.Description)
+                 @Html.DisplayNameFor(model => model.id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GitHubHomeUrl)
+                @Html.DisplayNameFor(model => model.login)
            </th>
             <th>
-                @Html.DisplayNameFor(model => model.Homepage)
+                @Html.DisplayNameFor(model => model.repos_url)
            </th>
               <th>
-                @Html.DisplayNameFor(model => model.Watchers)
+                @Html.DisplayNameFor(model => model.followers_url)
            </th>
 
             <th></th>
@@ -38,16 +38,16 @@
         @foreach(var item in Model) {
             <tr>
             <td>
-                 @Html.DisplayFor(modelItem => item.Description)
+                 @Html.DisplayFor(modelItem => item.id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GitHubHomeUrl)
+                @Html.DisplayFor(modelItem => item.login)
            </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Homepage)
+                @Html.DisplayFor(modelItem => item.repos_url)
            </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Watchers)
+                @Html.DisplayFor(modelItem => item.followers_url)
            </td>
             </tr>
         }

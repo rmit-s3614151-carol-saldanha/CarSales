@@ -18,17 +18,14 @@ namespace WebAPIClient
     {
         public static readonly HttpClient client = new HttpClient();
 
-        public static List<GitUser> repositories = ProcessRepositories().Result; 
+        public static List<GitUser> repositories = ProcessRepositories().Result;
         public static void Main(string[] args)
-        {            
-            var repositories1 = ProcessRepositories().Result;
+        {
+           
 
-            foreach (var repo in repositories1)
-                Console.WriteLine(repo.Description);
-            
             var host = BuildWebHost(args);
 
-            using(var scope = host.Services.CreateScope())
+            using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
 
@@ -48,31 +45,35 @@ namespace WebAPIClient
 
         private static async Task<List<GitUser>> ProcessRepositories()
         {
-            //public List<GitUser> desc = new List<GitUser>();
             var serializer = new DataContractJsonSerializer(typeof(List<GitUser>));
 
             client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
-            client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
+            //client.DefaultRequestHeaders.Accept.Add(
+                //new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
 
-            var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
+            //var byteArray = En÷coding.ASCII.GetBytes("rmit-s3614151-carol-saldanha:Car@2612");
+            client.DefaultRequestHeaders.Add("User-Agent", "rmit-s3614151-carol-saldanha");
+
+            //client.DefaultRequestHeaders.Add("Basic", Convert.ToBase64String(byteArray))));
+
+
+            var streamTask = client.GetStreamAsync("https://api.github.com/users");
             var repositories = serializer.ReadObject(await streamTask) as List<GitUser>;
 
             Console.WriteLine("Hello");
             // Console.WriteLine(GitUser);
             foreach (var repo in repositories)
             {
-                Console.WriteLine(repo.Description);
-                Console.WriteLine(repo.GitHubHomeUrl);
+                Console.WriteLine(repo.id);
+                Console.WriteLine(repo.login);
 
             }
             Console.WriteLine();
-            
-           
+
+
             return repositories;
 
-           
+
         }
 
         private static IWebHost BuildWebHost(string[] args) =>

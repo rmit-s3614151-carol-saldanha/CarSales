@@ -15,17 +15,17 @@ namespace WebAPIClient
     {
 
 
-        [DataMember(Name = "description")]
-        public string Description { get; set; }
+        [DataMember(Name = "id")]
+        public string id { get; set; }
 
-        [DataMember(Name = "html_url")]
-        public Uri GitHubHomeUrl { get; set; }
+        [DataMember(Name = "login")]
+        public Uri login { get; set; }
 
-        [DataMember(Name = "homepage")]
-        public Uri Homepage { get; set; }
+        [DataMember(Name = "repos_url")]
+        public Uri repos_url { get; set; }
 
-        [DataMember(Name = "watchers")]
-        public int Watchers { get; set; }
+        [DataMember(Name = "followers_url")]
+        public Uri followers_url { get; set; }
     }
 
 }
