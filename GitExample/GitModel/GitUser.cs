@@ -6,15 +6,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using System.Runtime.Serialization;
 namespace WebAPIClient
-
-//namespace GitExample.GitModel
 {
-    // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
+    //First 30 users of Git Hub
     [DataContract(Name = "repo")]
     public class GitUser
     {
-
-
         [DataMember(Name = "id")]
         public string id { get; set; }
 

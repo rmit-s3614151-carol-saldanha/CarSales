@@ -11,9 +11,13 @@
     padding-right: 15px;
      background-color: #fcf8e3;     
 }
+.navbar-header {
+    color: white;
+}
 
 .navbar-inverse {
-    background-color: #4574bd;
+    background-color: #4574bd;
+
 }
 
 td a {

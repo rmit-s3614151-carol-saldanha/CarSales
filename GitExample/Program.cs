@@ -18,15 +18,15 @@ namespace WebAPIClient
     {
         public static readonly HttpClient client = new HttpClient();
 
+        //Git User name which is searched
         public static string user="";
 
+        //List of first 30 user repositories
         public static List<GitUser> repositories = ProcessRepositories().Result;
-        //public static List<SearchUser> searchResult = search().Result;
 
         public static void Main(string[] args)
         {
            
-
             var host = BuildWebHost(args);
 
             using (var scope = host.Services.CreateScope())
@@ -38,6 +38,8 @@ namespace WebAPIClient
             BuildWebHost(args).Run();
         }
 
+        //This method is used to make Git API calls to get the first 30 users
+
         private static async Task<List<GitUser>> ProcessRepositories()
         {
             var serializer = new DataContractJsonSerializer(typeof(List<GitUser>));
@@ -47,6 +49,8 @@ namespace WebAPIClient
             var repositories = serializer.ReadObject(await streamTask) as List<GitUser>;
             return repositories;
         }
+
+        //This method is used to get a list of repositories of the searched user.
 
         public static async Task<List<SearchUser>> search()
         {
@@ -61,13 +65,14 @@ namespace WebAPIClient
 
         }
 
-
+        //Get the user name that is searched
         public static string getUserName(string userName)
         {
             user = userName;
             return user;
         }
 
+        //Concatenate the searched user name to the API url 
         public static string Combine(string uri1, string uri2)
         {
             uri1 = uri1.TrimEnd('/');
