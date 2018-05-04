@@ -68,7 +68,52 @@ td a {
     width: 100%;
     padding: 10px;
     background-color: #4574bd;
-    color: black;
+    color: white;
     text-align: center
 }
 
+.table {
+
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%
+}
+
+.table tr:hover {
+    background-color: #ddd
+}
+
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white
+}
+
+p + .submit {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4574bd;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999
+}
+
+    .submit:hover {
+        background-color: #3e8e41
+    }
+
+    .submit:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px)
+    }
+
+}

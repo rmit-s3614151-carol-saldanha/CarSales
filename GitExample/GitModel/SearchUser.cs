@@ -11,7 +11,7 @@ namespace WebAPIClient
     [DataContract(Name = "repo")]
     public class SearchUser
     {
-        DataMember(Name = "id")]
+        [DataMember(Name = "id")]
         public string id { get; set; }
 
         [DataMember(Name = "name")]

@@ -11,7 +11,7 @@
 <form method="get">
     <p>
         User Name: <input name="userName" required="required" value="@ViewBag.userName" />
-        <input type="submit" value="Search User"  required="required" onclick= asp-area="" asp-controller="Home" asp-action="Search">
+        <input type="submit" value="Search User" name ="submit" id ="submit" required="required" onclick= asp-area="" asp-controller="Home" asp-action="Search">
     </p>
     @ViewData["Data"]
 </form>

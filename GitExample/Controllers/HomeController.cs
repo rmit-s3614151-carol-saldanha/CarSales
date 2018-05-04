@@ -25,23 +25,18 @@ namespace WebAPIClient
 
         public async Task<IActionResult> Search(string userName)
         {
-            //Regular Expression to validate the Git User name that the user enters
-            Regex regex = new Regex(@"/\B@(?!.*(-){2,}.*)[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?\b/ig");
-            Match match = regex.Match(userName);
-            if (!match.Success)
-            {
-                //Display a view of Page 404 not found
-                return View("~/Views/Home/Page404.cshtml");
-            }
-            //Check if the userName is not null and search the Git API for the users repositories
-            else if (!string.IsNullOrWhiteSpace(userName))
+            if (!string.IsNullOrWhiteSpace(userName))
             {
                 Program.getUserName(userName);
                 ViewBag.userName = userName;
                 return View(await Program.search());
             }
-          
-           return  View("~/Views/Home/Page404.cshtml");
+            else
+            {
+
+                return View("~/Views/Home/Page404.cshtml");
+
+            }
               
         }
 
