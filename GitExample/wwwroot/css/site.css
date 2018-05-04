@@ -46,3 +46,25 @@ td a {
         display: none;
     }
 }
+.container body-content {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4574bd;
+    color: black;
+    text-align: center
+}
+
+.container-footer {
+    margin: 0 0 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #4574bd;
+    color: black;
+    text-align: center
+}
+

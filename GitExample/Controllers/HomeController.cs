@@ -12,6 +12,7 @@ using System.Net.Http.Headers;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 using System.Diagnostics.Contracts;
+using System.Text.RegularExpressions;
 
 namespace WebAPIClient
 {
@@ -52,17 +53,23 @@ namespace WebAPIClient
 
         public async Task<IActionResult> Search(string userName)
         {
-            if (!string.IsNullOrWhiteSpace(userName))
+            
+            Regex regex = new Regex(@"/\B@(?!.*(-){2,}.*)[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?\b/ig");
+            Match match = regex.Match(userName);
+            if (!match.Success)
+            {
+                return View("~/Views/Home/Page404.cshtml");
+            }
+            else if (!string.IsNullOrWhiteSpace(userName))
             {
                 Program.getUserName(userName);
-
                 ViewBag.userName = userName;
                 return View(await Program.search());
             }
-            else{
-                throw new Exception("Value should not be null");
-            }
-           return View(await Program.search());
+          
+           
+            return  View("~/Views/Home/Page404.cshtml");
+              
         }
 
 

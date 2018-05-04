@@ -28,6 +28,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Home\GitUser.cshtml" />
+    <None Remove="Views\Home\page404.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\ErrorViewModel.cs" />

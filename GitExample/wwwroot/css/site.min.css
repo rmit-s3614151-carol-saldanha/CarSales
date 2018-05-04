@@ -1,1 +1,22 @@
-body{padding-top:50px;padding-bottom:20px;background-color:beige}.body-content{padding-left:15px;padding-right:15px}.carousel-caption p{font-size:20px;line-height:1.4}.carousel-inner .item img[src$=".svg"]{width:100%}#qrCode{margin:15px}@media screen and (max-width:767px){.carousel-caption{display:none}}
+body{padding-top:50px;padding-bottom:20px;background-color:beige}.body-content{padding-left:15px;padding-right:15px}.carousel-caption p{font-size:20px;line-height:1.4}.carousel-inner .item img[src$=".svg"]{width:100%}#qrCode{margin:15px}@media screen and (max-width:767px){.carousel-caption{display:none}}.container body-content {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4574bd;
+    color: black;
+    text-align: center
+}
+
+p {
+    margin: 0 0 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #4574bd;
+    color: black;
+    text-align: center
+        
+}
