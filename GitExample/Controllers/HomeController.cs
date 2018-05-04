@@ -25,19 +25,22 @@ namespace WebAPIClient
 
         public async Task<IActionResult> Search(string userName)
         {
-            if (!string.IsNullOrWhiteSpace(userName))
-            {
-                Program.getUserName(userName);
-                ViewBag.userName = userName;
-                return View(await Program.search());
-            }
-            else
+            //If the user is not found, the exception is caught and error is displayed!!
+            try
             {
 
+                if (!string.IsNullOrWhiteSpace(userName))
+                {
+                    Program.getUserName(userName);
+                    ViewBag.userName = userName;
+                    return View(await Program.search());
+                }
+            }
+            catch(Exception ex){
                 return View("~/Views/Home/Page404.cshtml");
-
             }
-              
+          
+            return View(await Program.search()); 
         }
 
 
