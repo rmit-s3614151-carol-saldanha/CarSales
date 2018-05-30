@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Product>
+@using System.Text.RegularExpressions;
+
+@{
+    ViewBag.Title = "GitUser";
+}
+
+<h2>Car Sales</h2>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                 Make
+            </th>
+            <th>
+                Model
+           </th>
+            <th>
+                Title
+           </th>
+           <th>
+                Price
+           </th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model) {
+            <tr>
+            <td>
+                 @Html.DisplayFor(modelItem => item.Make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.Title)
+            </td>
+             <td>
+                <img src="@Html.DisplayFor(modelItem => item.Thumbnail)" alt="Paris" width="300" height="300">
+           
+            </td>
+           </tr>
+            
+        }
+    </tbody>
+</table>

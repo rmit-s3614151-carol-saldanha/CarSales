@@ -13132,17 +13132,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/carol/Documents/GitAPI/GitExample/GitExample.csproj",
-      "projectName": "GitExample",
-      "projectPath": "/Users/carol/Documents/GitAPI/GitExample/GitExample.csproj",
+      "projectUniqueName": "/Users/carol/Documents/CarSalesTask/GitExample/CarSales.csproj",
+      "projectName": "CarSales",
+      "projectPath": "/Users/carol/Documents/CarSalesTask/GitExample/CarSales.csproj",
       "packagesPath": "/Users/carol/.nuget/packages/",
-      "outputPath": "/Users/carol/Documents/GitAPI/GitExample/obj/",
+      "outputPath": "/Users/carol/Documents/CarSalesTask/GitExample/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/carol/.nuget/NuGet/NuGet.Config"
+        "/Users/carol/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -13164,26 +13164,27 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.NETCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "2.0",
+            "autoReferenced": true
+          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "[2.0.6, )"
+            "version": "2.0.6"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
-            "version": "[2.0.2, )"
+            "version": "2.0.2"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "[2.0.2, )"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[2.0.0, )",
-            "autoReferenced": true
+            "version": "2.0.2"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[2.0.3, )"
+            "version": "2.0.3"
           }
         },
         "imports": [

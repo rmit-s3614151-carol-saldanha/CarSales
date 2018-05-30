@@ -24,7 +24,7 @@
     <Content Remove="Views\Home\About %28copy%29.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GitModel\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Home\GitUser.cshtml" />
@@ -44,5 +44,6 @@
     <Compile Remove="Data\SeedData.cs" />
     <Compile Remove="GitModel\GitUser %28copy%29.cs" />
     <Compile Remove="GitModel\GitUser %28copy%29.cs" />
+    <Compile Remove="GitModel\SearchUser.cs" />
   </ItemGroup>
 </Project>

@@ -43,7 +43,7 @@ namespace Lecture6
             {
                 routes.MapRoute(
                     "default",
-                    "{controller=Home}/{action=Git}/{id?}");
+                    "{controller=Home}/{action=Product}/{id?}");
             });
         }
     }

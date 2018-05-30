@@ -20,3 +20,14 @@
 /Users/carol/Documents/GitAPI/GitExample/obj/Debug/netcoreapp2.0/GitExample.AssemblyInfo.cs
 /Users/carol/Documents/GitAPI/GitExample/obj/Debug/netcoreapp2.0/GitExample.dll
 /Users/carol/Documents/GitAPI/GitExample/obj/Debug/netcoreapp2.0/GitExample.pdb
+/Users/carol/Documents/CarSalesTask/GitExample/bin/Debug/netcoreapp2.0/GitExample.deps.json
+/Users/carol/Documents/CarSalesTask/GitExample/bin/Debug/netcoreapp2.0/GitExample.runtimeconfig.json
+/Users/carol/Documents/CarSalesTask/GitExample/bin/Debug/netcoreapp2.0/GitExample.runtimeconfig.dev.json
+/Users/carol/Documents/CarSalesTask/GitExample/bin/Debug/netcoreapp2.0/GitExample.dll
+/Users/carol/Documents/CarSalesTask/GitExample/bin/Debug/netcoreapp2.0/GitExample.pdb
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/GitExample.csprojResolveAssemblyReference.cache
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/GitExample.csproj.CoreCompileInputs.cache
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/GitExample.AssemblyInfoInputs.cache
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/GitExample.AssemblyInfo.cs
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/GitExample.dll
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/GitExample.pdb
