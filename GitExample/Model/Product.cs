@@ -11,6 +11,8 @@ namespace WebAPIClient
     [DataContract(Name = "repo")]
     public class Product
     {
+
+   
         [DataMember(Name = "Make")]
         public string Make { get; set; }
 
@@ -19,6 +21,9 @@ namespace WebAPIClient
 
         [DataMember(Name = "Title")]
         public string Title { get; set; }
+
+        [DataMember(Name = "Price")]
+        public int Price { get; set; }
 
         [DataMember(Name = "Thumbnail")]
         public Uri Thumbnail { get; set; }

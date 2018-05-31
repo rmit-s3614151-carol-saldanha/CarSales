@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Product>
+﻿@model List<Product>
 @using System.Text.RegularExpressions;
 
 @{
@@ -12,6 +12,11 @@
 <table class="table">
     <thead>
         <tr>
+
+            <th>
+                 Results
+            </th>
+          
             <th>
                  Make
             </th>
@@ -24,12 +29,17 @@
            <th>
                 Price
            </th>
+            <th>
+                Image
+            </th>
         <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach(var item in Model) {
             <tr>
+           
+          
             <td>
                  @Html.DisplayFor(modelItem => item.Make)
             </td>
@@ -38,6 +48,9 @@
             </td>
             <td>
             @Html.DisplayFor(modelItem => item.Title)
+            </td>
+               <td>
+            @Html.DisplayFor(modelItem => item.Price)
             </td>
              <td>
                 <img src="@Html.DisplayFor(modelItem => item.Thumbnail)" alt="Paris" width="300" height="300">

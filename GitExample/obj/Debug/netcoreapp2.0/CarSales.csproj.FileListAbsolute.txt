@@ -1,0 +1,11 @@
+/Users/carol/Documents/CarSalesTask/GitExample/bin/Debug/netcoreapp2.0/CarSales.deps.json
+/Users/carol/Documents/CarSalesTask/GitExample/bin/Debug/netcoreapp2.0/CarSales.runtimeconfig.json
+/Users/carol/Documents/CarSalesTask/GitExample/bin/Debug/netcoreapp2.0/CarSales.runtimeconfig.dev.json
+/Users/carol/Documents/CarSalesTask/GitExample/bin/Debug/netcoreapp2.0/CarSales.dll
+/Users/carol/Documents/CarSalesTask/GitExample/bin/Debug/netcoreapp2.0/CarSales.pdb
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/CarSales.csprojResolveAssemblyReference.cache
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/CarSales.csproj.CoreCompileInputs.cache
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/CarSales.AssemblyInfoInputs.cache
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/CarSales.AssemblyInfo.cs
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/CarSales.dll
+/Users/carol/Documents/CarSalesTask/GitExample/obj/Debug/netcoreapp2.0/CarSales.pdb

@@ -10,19 +10,23 @@ using System.Net.Http.Headers;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 using Lecture6;
+using System.IO;
+using System.Text;
+using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace WebAPIClient
 
 {
     public static class Program
     {
-        public static readonly HttpClient client = new HttpClient();
+       
 
         //Git User name which is searched
         public static string user="";
 
         //List of first 30 user repositories
-        public static List<Product> repositories = ProcessRepositories().Result;
+       
 
         public static void Main(string[] args)
         {
@@ -39,14 +43,8 @@ namespace WebAPIClient
         }
 
         //This method is used to make Git API calls to get the first 30 users
+     
 
-        private static async Task<List<Product>> ProcessRepositories()
-        {
-            var serializer = new DataContractJsonSerializer(typeof(List<Product>));
-            var streamTask = client.GetStreamAsync("http://www.mocky.io/v2/5b0e13b63200005700c198c9");
-            var repositories = serializer.ReadObject(await streamTask) as List<Product>;
-            return repositories;
-        }
 
         private static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args).UseStartup<Startup>().Build();

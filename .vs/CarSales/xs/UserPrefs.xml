@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{8D4315DA-A2C3-43D4-BD9F-114E0505F5EB}|Default">
   <MonoDevelop.Ide.ItemProperties.CarSales PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GitExample/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GitExample/Controllers/HomeController.cs">
     <Files>
-      <File FileName="GitExample/Views/Home/Product.cshtml" Line="16" Column="22" />
-      <File FileName="GitExample/Views/Home/Contact.cshtml" Line="1" Column="1" />
       <File FileName="GitExample/Views/Home/Default.cshtml" Line="1" Column="1" />
-      <File FileName="GitExample/Controllers/HomeController.cs" Line="8" Column="1" />
+      <File FileName="GitExample/Controllers/HomeController.cs" Line="83" Column="2" />
       <File FileName="GitExample/Views/Shared/_Layout.cshtml" Line="37" Column="22" />
-      <File FileName="GitExample/Model/Product.cs" Line="12" Column="25" />
+      <File FileName="GitExample/Model/Product.cs" Line="15" Column="4" />
       <File FileName="GitExample/Startup.cs" Line="46" Column="55" />
-      <File FileName="GitExample/Program.cs" Line="18" Column="6" />
+      <File FileName="GitExample/Program.cs" Line="23" Column="8" />
+      <File FileName="GitExample/Views/Home/Product.cshtml" Line="39" Column="38" />
+      <File FileName="GitExample/Utility/PaginatedList.cs" Line="22" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
