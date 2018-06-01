@@ -38,7 +38,8 @@ namespace WebAPIClient
         {
 
             ViewData["CurrentSort"] = sortOrder;
-            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["NameSortParm1"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["NameSortParm2"] = String.IsNullOrEmpty(sortOrder) ? "name_asc" : "";
 
             if (searchString != null)
             {
@@ -65,6 +66,9 @@ namespace WebAPIClient
                 case "name_desc":
 
                     query = query.OrderByDescending(s => s.Price).ToList();
+                    break;
+                case "name_asc":
+                    query = query.OrderBy(s => s.Price).ToList();
                     break;
 
                 default:

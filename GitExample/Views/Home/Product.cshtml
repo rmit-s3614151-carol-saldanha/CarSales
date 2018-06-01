@@ -21,7 +21,9 @@
                 Title
             </th>
             <th>
-                <a asp-action="Product" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Price</a>
+                <a asp-action="Product" asp-route-sortOrder="@ViewData["NameSortParm1"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">High to Low</a>
+                <a asp-action="Product" asp-route-sortOrder="@ViewData["NameSortParm2"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Low to High</a>
+
             </th>
             <th>
                 Image
