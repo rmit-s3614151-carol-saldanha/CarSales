@@ -21,7 +21,7 @@ namespace WebAPIClient
     public static class Program
     {
        
-
+        public static readonly HttpClient client = new HttpClient();
         //Git User name which is searched
         public static string user="";
 

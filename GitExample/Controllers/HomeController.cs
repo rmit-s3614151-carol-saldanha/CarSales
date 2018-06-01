@@ -12,21 +12,21 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 using System.Diagnostics.Contracts;
 using System.Text.RegularExpressions;
-using OAuthExample.Utility;
+using CarSales.Utility;
 using PagedList;
 using Newtonsoft.Json;
 using System.Text;
 using System.Json;
 using Newtonsoft.Json.Linq;
-
+using System.Web;
 namespace WebAPIClient
 {
     public class HomeController : Controller
     {
         private Product _context;
 
-        public static readonly HttpClient client = new HttpClient();
 
+        public static readonly HttpClient client = Program.client;
         //public async Task<IActionResult> Product(int page = 1, int pageSize = 5)
         //{
 
@@ -36,8 +36,22 @@ namespace WebAPIClient
         //    return View(model);
         //}
 
-        public async Task<IActionResult> Product(int page = 1, int pageSize = 5)
+        public async Task<IActionResult> Product(string sortOrder, string currentFilter,string searchString, int? page)
         {
+
+            int pageSize = 5;
+            
+            //ViewData["CurrentSort"] = sortOrder;
+            //ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            //if (searchString != null)
+            //{
+            //    page = 1;
+            //}
+            //else
+            //{
+            //    searchString = currentFilter;
+            //}
+            //ViewData["CurrentFilter"] = searchString;
 
             client.BaseAddress = new Uri("http://sampledata.carsalesnetwork.com.au/");
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -47,9 +61,15 @@ namespace WebAPIClient
             dynamic resultJson = await result.Content.ReadAsStringAsync();
             Console.WriteLine(JObject.Parse(resultJson)["Results"]);
             var serializer = new DataContractJsonSerializer(typeof(List<Product>));
-            return View(JObject.Parse(resultJson)["Results"].ToObject<List<Product>>());
+
+
+
+            return View(await PaginatedList<Product>
+                   .CreateAsync(JObject.Parse(resultJson)["Results"].ToObject<List<Product>>(), page ?? 1, pageSize));
 
         }
+
+
 
         public async Task<IActionResult> Default()
         {
@@ -61,6 +81,13 @@ namespace WebAPIClient
             ViewData["Message"] = "Git Hub Users";
             return View();
 
+        }
+
+        [HttpPost]
+        public ActionResult Index(Product model)
+        {
+
+            return View("Index");
         }
 
         public IActionResult Contact()

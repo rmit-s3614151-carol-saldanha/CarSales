@@ -48,5 +48,8 @@
     <Compile Remove="GitModel\GitUser %28copy%29.cs" />
     <Compile Remove="GitModel\GitUser %28copy%29.cs" />
     <Compile Remove="GitModel\SearchUser.cs" />
+    <Compile Remove="Model\Interfaces\IPageConfig.cs" />
+    <Compile Remove="Model\Interfaces\IPageHelper.cs" />
+    <Compile Remove="Model\Interfaces\IResultSet.cs" />
   </ItemGroup>
 </Project>
