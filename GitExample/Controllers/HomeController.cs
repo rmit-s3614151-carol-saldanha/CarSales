@@ -80,31 +80,31 @@ namespace WebAPIClient
 
             //var query1 = query[0].Make;
 
+            List<int> price = new List<int>();
+            for (int i = 0; i < query.Count;i++){
+                price.Add(query[i].Price);
+            }
+
            
 
             switch (sortOrder)
             {
                 case "name_desc":
 
-                    //query = query.OrderByDescending(s => s.Price);
+                    query = query.OrderByDescending(s => s.Price).ToList();
 
-                   
-                    var descListOb = query.OrderBy(x => x.Price);
-                    
-        
-               
                     break;
 
 
 
                 default:
-                    Console.WriteLine();
+                    query = query.OrderBy(s => s.Price).ToList();
                     break;
             }
 
 
             return View(await PaginatedList<Product>
-                   .CreateAsync(JObject.Parse(resultJson)["Results"].ToObject<List<Product>>(), page ?? 1, pageSize));
+                        .CreateAsync(query, page ?? 1, pageSize));
 
         }
 
