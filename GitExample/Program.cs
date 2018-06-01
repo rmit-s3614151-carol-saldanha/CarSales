@@ -9,7 +9,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
-using Lecture6;
+
 using System.IO;
 using System.Text;
 using System.Diagnostics;
@@ -21,7 +21,7 @@ namespace WebAPIClient
     public static class Program
     {
        
-        public static readonly HttpClient client = new HttpClient();
+  
         //Git User name which is searched
         public static string user="";
 

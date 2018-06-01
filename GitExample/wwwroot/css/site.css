@@ -4,6 +4,10 @@
     background-color: #fcf8e3;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;    
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -73,23 +77,22 @@ td a {
 }
 
 .table {
-
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%
+    width: 100%
 }
 
-.table tr:hover {
-    background-color: #ddd
-}
+    .table tr:hover {
+        background-color: #ddd
+    }
 
-.table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white
-}
+    .table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white
+    }
 
 #submit {
     display: inline-block;
@@ -117,3 +120,4 @@ td a {
     }
 
 }
+

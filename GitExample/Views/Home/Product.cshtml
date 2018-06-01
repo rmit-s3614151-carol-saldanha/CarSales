@@ -11,13 +11,10 @@
 
 
 <table class="table">
-    <thead>
+   
         <tr>
 
-            <th>
-                 Results
-            </th>
-          
+           
             <th>
                  Make
             </th>
@@ -27,15 +24,18 @@
             <th>
                 Title
            </th>
-           <th>
-                Price
+        
+            <th>
+           <a asp-action="Product" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Price</a>
            </th>
+           
+
             <th>
                 Image
             </th>
-        <th></th>
+       
         </tr>
-    </thead>
+   
     <tbody>
         @foreach(var item in Model) {
             <tr>
@@ -83,3 +83,21 @@
    class="btn btn-default @nextDisabled">
    Next
 </a>
+<style>
+
+    h2{
+         text-align:center;
+    }
+    .navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+    
+    }
+
+    .btn-default {
+    color: white;
+    background-color: #4CAF50;
+    border-color:  #4CAF50;
+    align: center;
+    margin:auto; 
+    }
+</style>
