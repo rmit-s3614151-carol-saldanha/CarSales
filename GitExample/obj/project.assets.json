@@ -13249,13 +13249,13 @@
       "projectName": "CarSales",
       "projectPath": "/Users/carol/Documents/CarSalesTask/GitExample/CarSales.csproj",
       "packagesPath": "/Users/carol/.nuget/packages/",
-      "outputPath": "/Users/carol/Documents/CarSalesTask/GitExample/obj",
+      "outputPath": "/Users/carol/Documents/CarSalesTask/GitExample/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/carol/.config/NuGet/NuGet.Config"
+        "/Users/carol/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -13277,39 +13277,38 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
+          "Microsoft.AspNet.WebApi.Client": {
             "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
+            "version": "[5.2.6, )"
           },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.6"
+            "version": "[2.0.6, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
-            "version": "2.0.2"
+            "version": "[2.0.2, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "2.0.2"
+            "version": "[2.0.2, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "2.0.3"
+            "version": "[2.0.3, )"
           },
           "PagedList.Mvc": {
             "target": "Package",
-            "version": "4.5.0"
-          },
-          "Microsoft.AspNet.WebApi.Client": {
-            "target": "Package",
-            "version": "5.2.6"
+            "version": "[4.5.0, )"
           },
           "System.Json": {
             "target": "Package",
-            "version": "4.5.0"
+            "version": "[4.5.0, )"
           }
         },
         "imports": [

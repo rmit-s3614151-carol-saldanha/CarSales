@@ -7,6 +7,7 @@ using WebAPIClient;
 
 namespace CarSales.Utility
 {
+    //This class handles Pagination with only 5 products per page
     public class PaginatedList<Product> : List<Product>
     {
         public int PageIndex { get; private set; }
@@ -19,7 +20,6 @@ namespace CarSales.Utility
            
             PageIndex = pageIndex;
             TotalPages = (int)Math.Ceiling(count / (double)pageSize);
-
             this.AddRange(items);
         }
 
@@ -39,11 +39,11 @@ namespace CarSales.Utility
             }
         }
 
-        // The CreateAsync method in this code takes page size and page number and 
-        // applies the appropriate Skip and Take statements to the IQueryable. 
-        // When ToListAsync is called on the IQueryable, it will return a List containing 
-        // only the requested page. The properties HasPreviousPage and HasNextPage can be 
-        // used to enable or disable Previous and Next paging buttons.
+        /* The CreateAsync method in this code takes page size and page number and 
+            applies the appropriate Skip and Take statements to the IQueryable. 
+            When ToListAsync is called on the IQueryable, it will return a List containing 
+            only the requested page. The properties HasPreviousPage and HasNextPage can be 
+            used to enable or disable Previous and Next paging buttons. */
         public static async Task<PaginatedList<Product>> CreateAsync(List<Product> products, int pageIndex, int pageSize)
         {
             count = products.Count();

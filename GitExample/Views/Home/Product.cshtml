@@ -7,40 +7,30 @@
 }
 
 <h2>Car Sales</h2>
-
-
-
 <table class="table">
    
         <tr>
 
-           
             <th>
                  Make
             </th>
             <th>
-                Model
-           </th>
+                 Model
+            </th>
             <th>
                 Title
-           </th>
-        
+            </th>
             <th>
-           <a asp-action="Product" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Price</a>
-           </th>
-           
-
+                <a asp-action="Product" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Price</a>
+            </th>
             <th>
                 Image
             </th>
-       
-        </tr>
+      </tr>
    
     <tbody>
         @foreach(var item in Model) {
             <tr>
-           
-          
             <td>
                  @Html.DisplayFor(modelItem => item.Make)
             </td>
@@ -50,12 +40,11 @@
             <td>
             @Html.DisplayFor(modelItem => item.Title)
             </td>
-               <td>
+            <td>
             @Html.DisplayFor(modelItem => item.Price)
             </td>
-             <td>
+            <td>
                 <img src="@Html.DisplayFor(modelItem => item.Thumbnail)" alt="Paris" width="300" height="300">
-           
             </td>
            </tr>
             

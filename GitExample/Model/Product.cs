@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using System.Runtime.Serialization;
 namespace WebAPIClient
 {
-    //First 30 users of Git Hub
+    //Model for all the Products from the API
     [DataContract(Name = "repo")]
     public class Product
     {

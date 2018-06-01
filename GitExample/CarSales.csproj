@@ -25,6 +25,7 @@
     <Content Remove="Views\Home\Index.cshtml" />
     <Content Remove="Views\Home\About %28copy%29.cshtml" />
     <Content Remove="Views\Home\About %28copy%29.cshtml" />
+    <Content Remove="Views\Home\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
@@ -51,5 +52,6 @@
     <Compile Remove="Model\Interfaces\IPageConfig.cs" />
     <Compile Remove="Model\Interfaces\IPageHelper.cs" />
     <Compile Remove="Model\Interfaces\IResultSet.cs" />
+    <Compile Remove="Model\SearchUser.cs" />
   </ItemGroup>
 </Project>
